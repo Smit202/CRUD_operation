@@ -4,7 +4,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  
 }
 
 .add-product-form {
@@ -17,6 +17,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .wrapper{
