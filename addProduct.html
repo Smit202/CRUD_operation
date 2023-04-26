@@ -105,20 +105,20 @@
             <div class="form">
                <div class="inputfield">
                   <label>Product Id</label>
-                  <input type="text" class="input">
+                  <input type="text" class="input" id="prod-id" required>
                </div>  
                 <div class="inputfield">
                   <label>Product Name</label>
-                  <input type="text" class="input">
+                  <input type="text" class="input" id="prod-name" required>
                </div>  
                <div class="inputfield">
                   <label>Product Price</label>
-                  <input type="number" class="input">
+                  <input type="number" class="input" id="prod-price" required>
                </div>  
                 <div class="inputfield">
                   <label>Category</label>
                   <div class="custom_select">
-                    <select>
+                    <select id="prod-category" required>
                       <option value="">Select</option>
                       <option value="fashion">Fashion</option>
                       <option value="home">Home</option>
@@ -131,14 +131,14 @@
                 </div> 
                 <div class="inputfield">
                   <label>Description</label>
-                  <textarea class="textarea"></textarea>
+                  <textarea class="textarea" id="prod-description" required></textarea>
                 </div> 
                 <div class="inputfield">
                     <label>Product Image</label>
-                    <input type="file" class="input">
+                    <input type="file" class="input" id="prod-image">
                  </div> <br>
                 <div class="inputfield">
-                    <input type="submit" value="Create Product" class="btn">
+                    <input type="submit" value="Create Product" class="btn" id="submit">
                 </div>
             </div>
         </div>
