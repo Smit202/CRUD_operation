@@ -7,6 +7,26 @@
     margin: 0px;
     padding: 0px;
     font-family: 'roboto', Arial, Helvetica, sans-serif;
+    transition: all .4s linear;
+}
+
+.btn {
+    width: 40%;
+    height: 60%;
+    display: inline-block;
+    /* margin-top: 1rem; */
+    border-radius: .5rem;
+    background: #4a8af0;
+    /* padding: .4rem 3rem; */
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+}
+
+.heading {
+    font-size: 32pt;
 }
 
 .view-products {
@@ -25,63 +45,72 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    /* justify-content: center; */
     padding: 2% 5%;
 }
 
 .product{
-    width: 270px;
+    width: 300px;
+    height: 400px;
     margin: 1rem;
-    background-color: var(--secondary-color);
-    box-shadow: 0 4px 5px  rgba(0,0,0,0,0.2);
+    background-color: rgba(74, 138, 240, 0.1);
+    box-shadow: 0 0px 10px  rgba(0,0,0,0.2);
     overflow: hidden;
     border-radius: 3px;
     position: relative;
 }
 
-.product img{
+.product .product-image {
     width: 100%;
-    height: 80%;
+    height: 70%;
+    background-color: antiquewhite;
+    /* border: 2px solid black; */
+}
+
+.product .product-image img {
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid black; */
 }
 
 .product-info{
-    color: white;
+    height: 30%;
+    color: black;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     padding: 1rem 1rem 1rem;
     letter-spacing: 0.5px;
     /* height: 10%; */
-    font-size: 12pt;
+    /* font-size: 12pt; */
     /* text-align: center; */
 }
 
+.product-name, .product-id, .product-price {
+    width: 100%;
+    /* height: 33.33%; */
+}
+
 .product-info h3{
-    margin-top: 0;
+    margin-top: 0px;
 }
 
 .product-info span{
-    background-color: var(--primary-color);
+    background-color: #22254b;
     padding: 3px;
     font-size: 14pt;
 }
 
-.product-info span.green{
-    color: lightgreen;
-}
-
-.product-info span.orange{
-    color: orange;
-}
-
-.product-info span.red{
-    color: lightcoral;
+.product-info span.price{
+    color: white;
 }
 
 .description{
+    width: 300px;
     position: absolute;
     background-color: rgb(243, 242, 242);
-    padding: 2rem 2rem;
+    padding: 1rem;
     top: 0%;
     bottom: 0%;
     right: 0%;
@@ -97,22 +126,25 @@
 }
 
 .description .content {
-    height: 90%;
+    width: 100%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
 }
 
-.review-btn {
-    height: 10%;
+.product-btn {
+    height: 20%;
+    width: 100%;
+    align-self: flex-end;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     padding-top: 5%;
 }
 
-/* .review-btn .btn {
-    background: var(--primary-color);
+/* .product-btn .btn {
+    background: #22254b;
     color: white;
     font-weight: bold;
 } */
@@ -126,7 +158,7 @@
     margin-bottom: 20px;
 }
 
-.product:hover .description{
+.product:hover .description {
     transform: translateY(0);
 }
 
@@ -136,3 +168,168 @@
     justify-content: center;
     font-weight: bold;
 } */
+
+.update-form-container {
+    position: fixed;
+    top: -105%;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, .9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.update-form-container.active {
+    top: 0;
+    opacity: 1;
+}
+
+.wrapper{
+    max-width: 700px;
+    width: 100%;
+    /* background: rgb(241, 244, 245); */
+    background-color: rgb(243, 242, 242);
+    /* margin: auto; */
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    padding: 30px;
+  }
+  
+  .wrapper .title{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #2874f0;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .wrapper .form{
+    width: 100%;
+  }
+  
+  .wrapper .form .inputfield{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .wrapper .form .inputfield label{
+     width: 200px;
+     color: #757575;
+     margin-right: 10px;
+    font-size: 14px;
+  }
+  
+  .wrapper .form .inputfield .input,
+  .wrapper .form .inputfield .textarea{
+    width: 100%;
+    outline: none;
+    border: 1px solid #d5dbd9;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+  
+  .wrapper .form .inputfield .textarea{
+    width: 100%;
+    height: 125px;
+    resize: none;
+  }
+  
+  .wrapper .form .inputfield .custom_select{
+    position: relative;
+    width: 100%;
+    height: 37px;
+  }
+  
+  .wrapper .form .inputfield .custom_select:before{
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    border: 8px solid;
+    border-color: #d5dbd9 transparent transparent transparent;
+    pointer-events: none;
+  }
+  
+  .wrapper .form .inputfield .custom_select select{
+    -webkit-appearance: none;
+    -moz-appearance:   none;
+    appearance:        none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    padding: 8px 10px;
+    font-size: 15px;
+    border: 1px solid #d5dbd9;
+    border-radius: 3px;
+  }
+  
+  
+  .wrapper .form .inputfield .input:focus,
+  .wrapper .form .inputfield .textarea:focus,
+  .wrapper .form .inputfield .custom_select select:focus{
+    border: 1px solid #88ade8;
+  }
+  
+  .wrapper .form .inputfield p{
+     font-size: 14px;
+     color: #757575;
+  }
+  
+  
+  .wrapper .form .inputfield .btn{
+    width: 50%;
+    padding: 8px 10px;
+    font-size: 20px; 
+    font-weight: bold;
+    border: 0px;
+    background:  #2874f0;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+    margin: auto;
+  }
+  
+  .wrapper .form .inputfield .btn:hover{
+    background: #0d50bc;
+  }
+  
+  .wrapper .form .inputfield:last-child{
+    margin-bottom: 0;
+  }
+
+  #cancel-update-btn {
+    float: right;
+    /* position: relative;
+    right: -100%;
+    top: -80%; */
+
+    color: black;
+    font-size: 2.4rem;
+    cursor: pointer;
+  }
+  
+  @media (max-width:420px) {
+    .wrapper .form .inputfield{
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .wrapper .form .inputfield label{
+      margin-bottom: 5px;
+    }
+    .wrapper .form .inputfield.terms{
+      flex-direction: row;
+    }
+  
+    .wrapper .form .inputfield .btn{
+      width: 100%;
+    }
+  }

@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/fontawesome.min.css" integrity="sha512-cHxvm20nkjOUySu7jdwiUxgGy11vuVPE9YeK89geLMLMMEOcKFyS2i+8wo0FOwyQO/bL8Bvq1KMsqK4bbOsPnA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/navbar-style.css">
     <link rel="stylesheet" href="./css/categories-style.css">
-    <link rel="stylesheet" href="./css/deals-section-style.css">
-    <link rel="stylesheet" href="./css/books-section-style.css">
     <link rel="stylesheet" href="./css/viewProduct-style.css">
 </head>
 <body>
@@ -188,27 +186,85 @@
     <div class="view-products" id="view-products">
         <h1 class="heading">All Products</h1><br>
         <div id="products-container">
-            <div class="product">
-                <img src="" alt="hgh">
+            <!-- <div class="product">
+                <div class="product-image"><img src="" alt="hgh"></div>
                 <div class="product-info">
-                    <h3>SmartWatch</h3>
-                    <span class="red">299</span>
+                    <div class="product-id">
+                        <h5>ID: 12355</h5>
+                    </div>
+                    <div class="product-name">
+                        <h3>SmartWatch</h3>
+                    </div>
+                    <div class="product-price">
+                        <p>&#8377 299</p>
+                    </div>
                 </div>
                 <div class="description">
                     <div class="content">
                         <h3>Description</h3>
                         jhgfjfdjbfj
                     </div>
-                    <!-- <div class="review-btn">
-                        <button type="button" class="btn movie-review" id="${item.id}" onclick="showReviews(${item.id})">Reviews</button>
-                    </div> -->
+                    <div class="product-btn">
+                        <button type="button" class="btn update" id="${item.id}">Update</button>
+                        <button type="button" class="btn delete" id="${item.id}">Delete</button>
+                    </div>
                 </div> 
-            </div>
+            </div> -->
         </div><br><br>
         <!-- <div class="loadBtn"><button type="button" class="btn" id="loadmore-btn">Load More</button></div> -->
     </div>
+    <div class="update-form-container">
+
+        <div class="wrapper">
+            <span class="fa-solid fa-xmark" id="cancel-update-btn"></span>
+            <div class="title"><h2>Update Product Details</h2></div><br>
+            <form class="form" id="update-form">
+               <div class="inputfield">
+                  <label>Product Id</label>
+                  <input type="text" class="input" id="prd-id" required disabled>
+               </div>  
+                <div class="inputfield">
+                  <label>Product Name</label>
+                  <input type="text" class="input" id="prd-name" required>
+               </div>  
+               <div class="inputfield">
+                  <label>Product Price</label>
+                  <input type="number" class="input" id="prd-price" required>
+               </div>  
+                <div class="inputfield">
+                  <label>Category</label>
+                  <div class="custom_select">
+                    <select id="prd-category" required>
+                      <option value="">Select</option>
+                      <option value="fashion">Fashion</option>
+                      <option value="home">Home</option>
+                      <option value="grocery">Grocery</option>
+                      <option value="mobiles">Mobiles</option>
+                      <option value="electronics">Electronics</option>
+                      <option value="beuty">Beuty Product</option>
+                    </select>
+                  </div>
+                </div> 
+                <div class="inputfield">
+                  <label>Description</label>
+                  <textarea class="textarea" id="prd-description" required></textarea>
+                </div> 
+                <div class="inputfield">
+                    <label>Product Image</label>
+                    <input type="file" class="input" id="prd-image">
+                 </div> <br>
+                <div class="inputfield update-form-btn">
+                    <input type="submit" value="Update" class="btn" id="submit">
+                    <!-- <input type="button" value="Cancel"> -->
+                </div>
+            </form>
+        </div>
+
+    </div>
 
     <div class="bottom"></div>
-
+    <script src="./js/view-product.js"></script>
+    <script src="./js/update-product.js"></script>
+    <script src="./js/delete-product.js"></script>
 </body>
 </html>

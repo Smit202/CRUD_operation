@@ -9,9 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/fontawesome.min.css" integrity="sha512-cHxvm20nkjOUySu7jdwiUxgGy11vuVPE9YeK89geLMLMMEOcKFyS2i+8wo0FOwyQO/bL8Bvq1KMsqK4bbOsPnA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/navbar-style.css">
-    <link rel="stylesheet" href="./css/categories-style.css">
-    <link rel="stylesheet" href="./css/deals-section-style.css">
-    <link rel="stylesheet" href="./css/books-section-style.css">
     <link rel="stylesheet" href="./css/addProduct-style.css">
 </head>
 <body>
@@ -102,23 +99,23 @@
     <div class="add-product-form">
         <div class="wrapper">
             <div class="title"><h2>Add Product Details</h2></div><br>
-            <div class="form">
+            <form class="form" id="product-form">
                <div class="inputfield">
                   <label>Product Id</label>
-                  <input type="text" class="input" id="prod-id" required>
+                  <input type="text" class="input" id="prd-id" required>
                </div>  
                 <div class="inputfield">
                   <label>Product Name</label>
-                  <input type="text" class="input" id="prod-name" required>
+                  <input type="text" class="input" id="prd-name" required>
                </div>  
                <div class="inputfield">
                   <label>Product Price</label>
-                  <input type="number" class="input" id="prod-price" required>
+                  <input type="number" class="input" id="prd-price" required>
                </div>  
                 <div class="inputfield">
                   <label>Category</label>
                   <div class="custom_select">
-                    <select id="prod-category" required>
+                    <select id="prd-category" required>
                       <option value="">Select</option>
                       <option value="fashion">Fashion</option>
                       <option value="home">Home</option>
@@ -131,20 +128,20 @@
                 </div> 
                 <div class="inputfield">
                   <label>Description</label>
-                  <textarea class="textarea" id="prod-description" required></textarea>
+                  <textarea class="textarea" id="prd-description" required></textarea>
                 </div> 
                 <div class="inputfield">
                     <label>Product Image</label>
-                    <input type="file" class="input" id="prod-image">
+                    <input type="file" class="input" id="prd-image" required>
                  </div> <br>
                 <div class="inputfield">
                     <input type="submit" value="Create Product" class="btn" id="submit">
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 
     <div class="bottom"></div>
-
+    <script src="./js/add-product.js"></script>
 </body>
 </html>
