@@ -28,6 +28,7 @@ div {
     justify-content: center;
     align-items: center;
     position: fixed;
+    z-index: 999;
 }
 
 .logo {
@@ -49,7 +50,7 @@ div {
 }
 
 .logo h1{
-    color: #ffe500;
+    color: white;
 }
 
 .plus {

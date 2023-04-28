@@ -56,17 +56,17 @@
             </a>
             <div class="sort-options">
                 <div class="triangle-up"></div>
-                <div class="sort-options-item" style="border: none;">
+                <div class="sort-options-item" id="byNameAtoZ" style="border: none;">
                     <!-- <i class="fa-solid fa-bell"></i> -->
                     <p>By Name (A-Z)</p>
                 </div>
-                <div class="sort-options-item">
+                <div class="sort-options-item" id="byNameZtoA">
                     <p>By Name (Z-A)</p>
                 </div>
-                <div class="sort-options-item">
+                <div class="sort-options-item" id="byPriceLtoH">
                     <p>By Price (Low to High)</p>
                 </div>
-                <div class="sort-options-item">
+                <div class="sort-options-item" id="byPriceHtoL">
                     <p>By Price (High to Low)</p>
                 </div>
             </div>
@@ -86,8 +86,8 @@
 
         <div class="searchbar">
 
-            <input type="text" placeholder="Search for products">
-            <button>
+            <input type="text" placeholder="Search for products" id="searchProduct">
+            <button id="searchButton">
                 <svg width="20" height="20" viewBox="0 0 17 18" class="" xmlns="http://www.w3.org/2000/svg"><g fill="#2874F1" fill-rule="evenodd"><path class="_34RNph" d="m11.618 9.897l4.225 4.212c.092.092.101.232.02.313l-1.465 1.46c-.081.081-.221.072-.314-.02l-4.216-4.203"></path><path class="_34RNph" d="m6.486 10.901c-2.42 0-4.381-1.956-4.381-4.368 0-2.413 1.961-4.369 4.381-4.369 2.42 0 4.381 1.956 4.381 4.369 0 2.413-1.961 4.368-4.381 4.368m0-10.835c-3.582 0-6.486 2.895-6.486 6.467 0 3.572 2.904 6.467 6.486 6.467 3.582 0 6.486-2.895 6.486-6.467 0-3.572-2.904-6.467-6.486-6.467"></path></g></svg>
             </button>
         </div>
@@ -100,30 +100,30 @@
 
     <div class="categories-container">
         
-        <div class="category-item">
+        <div class="category-item" id="grocery">
             <a href="#">
                 <img loading="lazy" alt="Grocery" src="https://rukminim1.flixcart.com/flap/128/128/image/29327f40e9c4d26b.png?q=100">
                 <div>Grocery</div>
             </a>
         </div>
 
-        <div class="category-item">
+        <div class="category-item" id="healthcare">
             <a href="#">
-                <img loading="lazy" alt="Mobiles" src="https://rukminim1.flixcart.com/flap/128/128/image/22fddf3c7da4c4f4.png?q=100">
-                <div>Mobiles</div>
+                <img loading="lazy" alt="Healthcare" src="https://img.freepik.com/premium-vector/human-healthcare-logo-design_8586-573.jpg?w=2000">
+                <div>Healthcare</div>
             </a>
         </div>
 
-        <div class="category-item">
+        <div class="category-item" id="fashion">
             <a href="#">
-                <img loading="lazy" alt="Fashion" src="https://rukminim1.flixcart.com/flap/128/128/image/c12afc017e6f24cb.png?q=100">
+                <img loading="lazy" alt="Fashion & Beauty" src="https://rukminim1.flixcart.com/flap/128/128/image/c12afc017e6f24cb.png?q=100">
                 <div>
-                    <p>Fashion</p>
+                    <p>Fashion & Beuty</p>
                 </div>
             </a>
         </div>
 
-        <div class="category-item">
+        <div class="category-item" id="electronics">
             <a href="#">
                 <img loading="lazy" alt="Electronics" src="https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100">
                 <div>
@@ -132,7 +132,7 @@
             </a>
         </div>
 
-        <div class="category-item">
+        <div class="category-item" id="home">
             <a href="#">
                 <img loading="lazy" alt="Home" src="https://rukminim1.flixcart.com/flap/128/128/image/ab7e2b022a4587dd.jpg?q=100">
                 <div>
@@ -141,44 +141,30 @@
             </a>
         </div>
 
-        <div class="category-item">
+        <div class="category-item" id="books">
             <a href="#">
-                <img loading="lazy" alt="Appliances" src="https://rukminim1.flixcart.com/flap/128/128/image/0ff199d1bd27eb98.png?q=100">
-                <div>Appliances</div>
+                <img loading="lazy" alt="Books & Education" src="https://m.media-amazon.com/images/I/813uPMOnskL.jpg">
+                <div>Books & Education</div>
             </a>
         </div>
 
-        <div class="category-item">
+        <div class="category-item" id="sports">
             <a href="#">
-                <img loading="lazy" alt="Travel" src="https://rukminim1.flixcart.com/flap/128/128/image/71050627a56b4693.png?q=100">
-                <div>Travel</div>
-            </a>
-        </div>
-
-        <div class="category-item">
-            <a href="#">
-                <img loading="lazy" alt="Top Offers" src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100">
-                <div>Top Offers</div>
-            </a>
-        </div>
-
-        <!-- <div class="category-item">
-            <a href="#">
-                <img loading="lazy" alt="Beauty, Toys &amp; More" src="https://rukminim1.flixcart.com/flap/128/128/image/dff3f7adcf3a90c6.png?q=100">
+                <img loading="lazy" alt="sports & outdoor" src="https://cdn.shopify.com/shopifycloud/hatchful_web_two/bundles/e386975789b98c50fb81cbb3d9a59f08.jpg">
                 <div class="category-item-with-dropdown">
-                    <p>Beauty, Toys & More</p>
+                    <p>Sports & Outdoor</p>
                 </div>
             </a>
         </div>
 
-        <div class="category-item">
+        <div class="category-item" id="toys">
             <a href="#">
-                <img loading="lazy" alt="Two Wheelers" src="https://rukminim1.flixcart.com/fk-p-flap/128/128/image/05d708653beff580.png?q=100">
-                <div>
-                    <p>Two Wheelers</p>
+                <img loading="lazy" alt="Toys" src="https://rukminim1.flixcart.com/flap/128/128/image/dff3f7adcf3a90c6.png?q=100">
+                <div class="category-item-with-dropdown">
+                    <p>Toys</p>
                 </div>
             </a>
-        </div> -->
+        </div>
     </div>
 
     <!----------------------------------- categories ends -------------------------------------------->
@@ -235,13 +221,14 @@
                   <label>Category</label>
                   <div class="custom_select">
                     <select id="prd-category" required>
-                      <option value="">Select</option>
-                      <option value="fashion">Fashion</option>
-                      <option value="home">Home</option>
-                      <option value="grocery">Grocery</option>
-                      <option value="mobiles">Mobiles</option>
-                      <option value="electronics">Electronics</option>
-                      <option value="beuty">Beuty Product</option>
+                        <option value="grocery">Grocery</option>
+                        <option value="healthcare">Healthcare</option>
+                        <option value="fashion">Fashion & Beuty</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="home">Home</option>
+                        <option value="books">Books & Education</option>
+                        <option value="sports">Sports & Outboor</option>
+                        <option value="toys">Toys</option>
                     </select>
                   </div>
                 </div> 

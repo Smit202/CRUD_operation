@@ -1,7 +1,7 @@
 # Simform HTML & CSS Practical - CRUD Operation using localStorage
 
-Built flipkart home page using HTML, baisc CSS properties and flexbox.
+Built CRUD application using HTML, CSS and Javascript localStorage.
 
 ## Links
 
-- Live Site URL: [Flipkart](https://smit202.github.io/Flipkart_home_page/)
+- Live Site URL: [CRUD Application](https://smit202.github.io/CRUD_operation/)

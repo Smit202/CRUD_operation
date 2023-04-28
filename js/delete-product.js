@@ -7,5 +7,6 @@ function deleteProduct(id) {
         productsArray.splice(prd_index, 1);
         localStorage.setItem('products', JSON.stringify(productsArray));
         location.reload();
+        alert('product deleted successfully');
     }
 }

@@ -10,13 +10,13 @@
     background-color: white;
     padding: 0px 10%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    z-index: -1;
 }
 
 .category-item {
     padding: 12px 8px;
     text-align: center;
     width: 10%;
+    cursor: pointer;
 }
 
 .category-item div {
@@ -27,22 +27,6 @@
     display: flex;
     justify-content: center;
     /* display: inline; */
-}
-
-
-.category-item svg path {
-    stroke: #000;
-    stroke-width: 58px;
-}
-
-.category-item a:hover div, .category-item a:hover svg path{
-    color: #2874f0;
-    stroke: #2874f0;
-}
-
-.category-item a:hover svg {
-    transform: rotate(-180deg);
-    transition: 0.2s;
 }
 
 .category-item p {
