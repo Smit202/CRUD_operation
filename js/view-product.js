@@ -9,37 +9,54 @@ let categories = document.querySelectorAll('.category-item');
 let productsArray = JSON.parse(localStorage.getItem('products'));
 showProducts(productsArray);
 
+// sortByNameAtoZ.addEventListener('click', () => {
+//     container.innerHTML = '';
+//     let productsArray = JSON.parse(localStorage.getItem('products'));
+//     productsArray.sort((item) => item.prd_name);
+//     console.log(productsArray);
+//     showProducts(productsArray);
+// });
+
+// sortByNameZtoA.addEventListener('click', () => {
+//     container.innerHTML = '';
+//     let productsArray = JSON.parse(localStorage.getItem('products'));
+//     productsArray.sort((item) => item.prd_name);
+//     productsArray.reverse();
+//     console.log(productsArray);
+//     showProducts(productsArray);
+// });
+
+// sortByPriceLtoH.addEventListener('click', () => {
+//     container.innerHTML = '';
+//     let productsArray = JSON.parse(localStorage.getItem('products'));
+//     productsArray.sort((a, b) => a.prd_price - b.prd_price);
+//     console.log(productsArray);
+//     showProducts(productsArray);
+// });
+
+// sortByPriceHtoL.addEventListener('click', () => {
+//     container.innerHTML = '';
+//     let productsArray = JSON.parse(localStorage.getItem('products'));
+//     productsArray.sort((a, b) => b.prd_price - a.prd_price);
+//     console.log(productsArray);
+//     showProducts(productsArray);
+// });
+
 sortByNameAtoZ.addEventListener('click', () => {
-    container.innerHTML = '';
     let productsArray = JSON.parse(localStorage.getItem('products'));
-    productsArray.sort((item) => item.prd_name);
-    console.log(productsArray);
-    showProducts(productsArray);
+    sortByName(productsArray, 0)
 });
-
 sortByNameZtoA.addEventListener('click', () => {
-    container.innerHTML = '';
     let productsArray = JSON.parse(localStorage.getItem('products'));
-    productsArray.sort((item) => item.prd_name);
-    productsArray.reverse();
-    console.log(productsArray);
-    showProducts(productsArray);
+    sortByName(productsArray, 1)
 });
-
 sortByPriceLtoH.addEventListener('click', () => {
-    container.innerHTML = '';
     let productsArray = JSON.parse(localStorage.getItem('products'));
-    productsArray.sort((a, b) => a.prd_price - b.prd_price);
-    console.log(productsArray);
-    showProducts(productsArray);
+    sortByPrice(productsArray, 0)
 });
-
 sortByPriceHtoL.addEventListener('click', () => {
-    container.innerHTML = '';
     let productsArray = JSON.parse(localStorage.getItem('products'));
-    productsArray.sort((a, b) => b.prd_price - a.prd_price);
-    console.log(productsArray);
-    showProducts(productsArray);
+    sortByPrice(productsArray, 1)
 });
 
 document.getElementById('searchButton').addEventListener('click', () => {
@@ -82,6 +99,10 @@ categories.forEach(category => {
             let matchedProducts = productsArray.filter(item => item.prd_category == category.id);
             document.querySelector('.view-products .heading').innerHTML = 'Matched Products';
             showProducts(matchedProducts);
+            sortByNameAtoZ.addEventListener('click', () => sortByName(matchedProducts, 0));
+            sortByNameZtoA.addEventListener('click', () => sortByName(matchedProducts, 1));
+            sortByPriceLtoH.addEventListener('click', () => sortByPrice(matchedProducts, 0));
+            sortByPriceHtoL.addEventListener('click', () => sortByPrice(matchedProducts, 1));
             flag = 1;
         }
         else {
@@ -122,4 +143,21 @@ function showProducts(array) {
     
         container.appendChild(product);
     });
+}
+
+function sortByName(array, order) {
+    container.innerHTML = '';
+    if(order==1) array.sort((item) => item.prd_name);
+    else array.sort((item) => item.prd_name).reverse();
+    
+    console.log(array);
+    showProducts(array);
+}
+
+function sortByPrice(array, order) {
+    container.innerHTML = '';
+    if(order==0) array.sort((a, b) => a.prd_price - b.prd_price);
+    else array.sort((a, b) => b.prd_price - a.prd_price);
+    console.log(array);
+    showProducts(array);
 }
