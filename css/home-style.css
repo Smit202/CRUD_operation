@@ -1,7 +1,12 @@
 
+body {
+    background-image: url('../images/background.jpg');
+      background-size: cover;
+}
+
 .home {
-    background: url('https://media.istockphoto.com/id/1334071910/vector/abstract-3d-white-blue-cylinder-pedestal-podium-with-light-blue-layered-wavy-shape-backdrop.jpg?s=612x612&w=0&k=20&c=p9zM1j44hLaWmjW_-KE9WxqrkldAQD3hRFzGBlwxFXc=');
-    background-size: cover;
+    /* background: url('https://media.istockphoto.com/id/1334071910/vector/abstract-3d-white-blue-cylinder-pedestal-podium-with-light-blue-layered-wavy-shape-backdrop.jpg?s=612x612&w=0&k=20&c=p9zM1j44hLaWmjW_-KE9WxqrkldAQD3hRFzGBlwxFXc=');
+    background-size: cover; */
     position: absolute;
     top: 70px;
     width: 100%;
